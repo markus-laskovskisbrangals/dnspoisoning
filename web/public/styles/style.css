@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.container{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    height: 75vh;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.description{
+    margin-top: 20vh;
+}
+
+.description img{
+    height: 106px;
+    margin-left: -30px;
+}
+
+.description h2{
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+}
+
+.login-box{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15vh;
+    width: 95%;
+    margin-left: 10%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+
+.login-box input{
+    width: 100%;
+    height: 50px;
+    border: 2px solid #f0f2f5;
+    padding: 14px 16px;
+    font-size: 17px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+.login-box input:focus{
+    outline: none;
+    border: 1px solid #1877f2;
+}
+
+.login-options{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.login-button{
+    background-color: #1877f2;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 48px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.recovery{
+    margin-top: 15px;
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.line{
+    border-bottom: 1px solid #dadde1;
+    margin: 20px 16px;
+}
+
+.recovery:hover{
+    text-decoration: underline;
+}
+
+.sign-up{
+    background-color: #42b72a;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 48px;
+    width: 60%;
+    margin: 10px auto;
+}
+
+.login-wrapper p{
+    font-size: 14px;
+    margin-top: 28px;
+    text-align: center;
+    align-self: center;
+    margin-left: 15%;
+}
+
+.footer{
+    width: 100%;
+    height: 25vh;
+    background-color: #fff;
+}
+
+.languages{
+    margin-top: 20px;
+}
+
+.languages a{
+    color: #8a8d91;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.languages a:hover{
+    text-decoration: underline;
+}
+
+.footer .container{
+    height: 25vh;
+}
