@@ -1,3 +1,4 @@
+//Include required libraries and files
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -5,20 +6,24 @@ const sqlite3 = require('sqlite3').verbose()
 const crypto = require('crypto')
 require('dotenv').config()
 
+//Declaring database and encryption variables
 const db = new sqlite3.Database('./database/users.db')
 const key = Buffer.from(process.env.KEY, 'utf8') 
 const iv = process.env.IV
 const algorithm = 'aes256'
 
+//Setting up express library
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
+//Index route which renders login page
 app.get('/', (req, res) => {
     res.render('index')
 })
 
+//Login route which sends data to database
 app.post('/login', async (req, res) => {
     const email = await req.body.email
     const password = await req.body.password
@@ -33,6 +38,7 @@ app.post('/login', async (req, res) => {
     })
 })
 
+//Data riute which shows stored data as json object
 app.get('/data', (req, res) => {
     if(req.query.key == key || req.query.key == 'demo'){
         db.all('SELECT * FROM users', (err, rows) => {
@@ -59,4 +65,5 @@ app.get('/data', (req, res) => {
     }
 })
 
+//Running server on TCP port 3000
 app.listen(3000)

